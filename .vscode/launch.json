@@ -1,0 +1,59 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Pylint golden_hammer_checker",
+      "type": "python",
+      "request": "launch",
+      "module": "pylint",
+      "env": {
+        "PYTHONPATH": "${workspaceRoot}",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "args": [
+        "--load-plugins=golden_hammer_checker",
+        "--disable=all",
+        "--enable=R2403",
+        "handler_journalist.py"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Pylint http_client_checker",
+      "type": "python",
+      "request": "launch",
+      "module": "pylint",
+      "env": {
+        "PYTHONPATH": "${workspaceRoot}",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "args": [
+        "--load-plugins=http_client_checker",
+        "--disable=all",
+        "--enable=W2400",
+        "handler_descriptor.py"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Pylint no_class_checker",
+      "type": "python",
+      "request": "launch",
+      "module": "pylint",
+      "env": {
+        "PYTHONPATH": "${workspaceRoot}",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "args": [
+        "--load-plugins=no_class_checker",
+        "--disable=all",
+        "--enable=R2401,R2402",
+        "handler_alien.py"
+      ],
+      "justMyCode": true
+    },
+  ]
+}
