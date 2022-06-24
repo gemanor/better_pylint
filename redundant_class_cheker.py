@@ -2,9 +2,9 @@ from pylint.checkers import BaseChecker
 from astroid import AssignAttr
 
 
-class NoClassChecker(BaseChecker):
+class RedundantClassChecker(BaseChecker):
 
-    name = "no_class_checker"
+    name = "redundant_class_cheker.py"
     msgs = {
         "R2401": (
             "Missing init function, class should not be used",
@@ -45,4 +45,4 @@ class NoClassChecker(BaseChecker):
 
 
 def register(linter):
-    linter.register_checker(NoClassChecker(linter))
+    linter.register_checker(RedundantClassChecker(linter))

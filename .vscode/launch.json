@@ -39,7 +39,7 @@
       "justMyCode": true
     },
     {
-      "name": "Python: Pylint no_class_checker",
+      "name": "Python: Pylint redundant_class_cheker",
       "type": "python",
       "request": "launch",
       "module": "pylint",
@@ -48,7 +48,7 @@
         "PYTHONIOENCODING": "utf-8"
       },
       "args": [
-        "--load-plugins=no_class_checker",
+        "--load-plugins=redundant_class_cheker",
         "--disable=all",
         "--enable=R2401,R2402",
         "handler_alien.py"
