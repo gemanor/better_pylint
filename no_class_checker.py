@@ -22,7 +22,7 @@ class NoClassChecker(BaseChecker):
         super().__init__(linter)
 
     def leave_classdef(self, node):
-        if node.type != 'class':
+        if node.bases:
             return
 
         has_constructor = '__init__' in [m.name for m in node.mymethods()]

@@ -7,7 +7,8 @@ REQUESTS_LIBRARIES = ['requests', 'urllib3']
 class HTTPClientChecker(BaseRawFileChecker):
     """
     This class is a pylint checker for HTTPClient usage.
-    To test it use the following command: `pylint --load-plugins=http_client_checker --disable=all --enable=W2400 handler.py`
+    To test it use the following command:
+    `pylint --load-plugins=http_client_checker --disable=all --enable=W2400 handler.py`
     """
 
     name = "http_client_checker"
