@@ -50,7 +50,7 @@
       "args": [
         "--load-plugins=redundant_class_cheker",
         "--disable=all",
-        "--enable=R2401,R2402",
+        "--enable=W2501,W2502",
         "handler_alien.py"
       ],
       "justMyCode": true

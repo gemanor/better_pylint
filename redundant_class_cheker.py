@@ -6,30 +6,31 @@ class RedundantClassChecker(BaseChecker):
 
     name = "redundant_class_cheker.py"
     msgs = {
-        "R2401": (
+        "W2501": (
             "Missing init function, class should not be used",
             "class-not-used-missing-init-function",
             "Used when class should not be used."
         ),
-        "R2402": (
+        "W2502": (
             "No self assignement in constrcutor",
             "class-not-used-no-self-assignment",
             "Used when class has no self assignment in constructor."
         )
     }
 
-    def __init__(self, linter):
-        super().__init__(linter)
-
     def leave_classdef(self, node):
+        """
+        Checks if class has init function and if it has
+        self assignment in constructor.
+        """
         if node.bases:
             return
 
         has_constructor = '__init__' in [m.name for m in node.mymethods()]
         if not has_constructor:
             self.add_message(
-                msgid="class-not-used-missing-init-function",
-                line=node.fromlineno
+                msgid="W2501",
+                node=node
             )
             return
 
@@ -39,10 +40,13 @@ class RedundantClassChecker(BaseChecker):
         ]
         if not has_self_assignment:
             self.add_message(
-                msgid="class-not-used-no-self-assignment",
-                line=node.fromlineno
+                msgid="W2502",
+                node=const_func
             )
 
 
 def register(linter):
+    """
+    Register checker to pylint
+    """
     linter.register_checker(RedundantClassChecker(linter))

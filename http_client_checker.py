@@ -20,19 +20,16 @@ class HTTPClientChecker(BaseRawFileChecker):
         )
     }
 
-    def __init__(self, linter):
-        super().__init__(linter)
-
-    def process_module(self, file):
+    def process_module(self, node):
         """
         This method is called by pylint to process a file.
         :param file:
         :return:
         """
-        if "http_client" in file.name:
+        if "http_client" in node.name:
             return
 
-        with file.stream() as stream:
+        with node.stream() as stream:
             for (lineno, line) in enumerate(stream):
                 line_args = list(str(line, 'utf-8').split())
                 indexes = [

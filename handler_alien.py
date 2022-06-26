@@ -26,14 +26,13 @@ class Handler:
 
 
 class ValidHandler:
+    """
+      Github Action Handlers
+    """
     def __init__(self) -> None:
         self.host = 'string'
         name = 'gabriel'
         print(name)
-
-    """
-      Github Action Handlers
-    """
     def get_repos(self):
         """
           :return: list of repositories

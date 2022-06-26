@@ -1,4 +1,4 @@
-from clients.http_client import HTTPClient
+from http_client import HTTPClient
 
 
 class GithubClient(HTTPClient):
