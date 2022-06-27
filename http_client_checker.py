@@ -1,3 +1,4 @@
+""" Pylint checker plugin for checking usage of HTTP libraries """
 from pylint.checkers import BaseRawFileChecker
 
 IMPORT_TERMS = ['import', 'from']
@@ -45,4 +46,7 @@ class HTTPClientChecker(BaseRawFileChecker):
 
 
 def register(linter):
+    """
+    Register checker to pylint
+    """
     linter.register_checker(HTTPClientChecker(linter))

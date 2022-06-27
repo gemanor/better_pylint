@@ -2,7 +2,8 @@
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": [
-    "--load-plugins=redundant_class_cheker,http_client_checker,golden_hammer_checker",
+    "--load-plugins",
+    "redundant_class_cheker,http_client_checker,golden_hammer_checker",
   ],
   "python.envFile": "${workspaceFolder}/.env",
   "python.linting.flake8Enabled": false,

@@ -1,9 +1,12 @@
+"""Pylint checker plugin for checking redundant class definition# """
 from pylint.checkers import BaseChecker
 from astroid import AssignAttr
 
 
 class RedundantClassChecker(BaseChecker):
-
+    """
+    Checker for redundant class
+    """
     name = "redundant_class_cheker.py"
     msgs = {
         "W2501": (
