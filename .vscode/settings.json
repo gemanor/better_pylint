@@ -3,7 +3,8 @@
   "python.linting.pylintEnabled": true,
   "python.linting.pylintArgs": [
     "--load-plugins",
-    "redundant_class_cheker,http_client_checker,golden_hammer_checker",
+    "redundant_class_cheker,http_client_checker,golden_hammer_checker, rbac_role_inspection",
+    "--disable=redundant-unittest-assert, missing-function-docstring, missing-module-docstring",
   ],
   "python.envFile": "${workspaceFolder}/.env",
   "python.linting.flake8Enabled": false,

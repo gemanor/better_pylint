@@ -34,7 +34,7 @@
         "--load-plugins=http_client_checker",
         "--disable=all",
         "--enable=W2400",
-        "handler_descriptor.py"
+        "./handlers"
       ],
       "justMyCode": true
     },
@@ -52,6 +52,23 @@
         "--disable=all",
         "--enable=W2501,W2502",
         "handler_alien.py"
+      ],
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Pylint rbac_role_inspection",
+      "type": "python",
+      "request": "launch",
+      "module": "pylint",
+      "env": {
+        "PYTHONPATH": "${workspaceRoot}",
+        "PYTHONIOENCODING": "utf-8"
+      },
+      "args": [
+        "--load-plugins=rbac_role_inspection",
+        "--disable=all",
+        "--enable=R2406",
+        "./handlers"
       ],
       "justMyCode": true
     },
