@@ -17,7 +17,7 @@
         "--load-plugins=golden_hammer_checker",
         "--disable=all",
         "--enable=R2403",
-        "handler_journalist.py"
+        "./handlers/handler_journalist.py"
       ],
       "justMyCode": true
     },
@@ -34,7 +34,7 @@
         "--load-plugins=http_client_checker",
         "--disable=all",
         "--enable=W2400",
-        "handler_descriptor.py"
+        "./handlers/handler_descriptor.py"
       ],
       "justMyCode": true
     },
@@ -51,7 +51,7 @@
         "--load-plugins=redundant_class_cheker",
         "--disable=all",
         "--enable=W2501,W2502",
-        "handler_alien.py"
+        "./handlers/handler_alien.py"
       ],
       "justMyCode": true
     },

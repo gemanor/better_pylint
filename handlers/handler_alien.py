@@ -12,6 +12,7 @@ class Handler:
     """
       Github Action Handlers
     """
+
     def get_repos(self):
         """
           :return: list of repositories
